@@ -5,3 +5,8 @@ Bingwall
 
 * Displays current bing wallpaper in HD, if possible
 * Bookmark bar similar to the existing bookmark bar
+
+## Getting Started
+* Open chrome://extensions/
+* Enable developer-mode
+* Drag&drop bingwall folder into extension tab
