@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>New Tab</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="css/main.css" type="text/css" media="screen">
+    </head>
+    <body>
+
+        <script id="template-bookmarkbar" type="text/x-handlebars-template">
+          <div id="bookmarkbar">
+            <ul>
+              {{#each bookmarks}}
+                <li><img src="chrome://favicon/{{url}}">&nbsp;<a href="{{url}}">{{title}}</a></li>
+              {{/each}}
+            </ul>
+          </div>
+        </script>
+
+        <!-- Libs -->
+        <script src="bower_components/handlebars/handlebars.js"></script>
+
+        <!-- Main -->
+        <script src="app/main.js"></script>
+
+        <!-- Modules -->
+        <script src="app/wallpaper.js"></script>
+        <script src="app/bookmarks.js"></script>
+
+        <!-- Init -->
+        <script src="app/init.js"></script>
+    </body>
+</html>

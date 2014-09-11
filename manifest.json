@@ -1,0 +1,12 @@
+{
+   "chrome_url_overrides": {
+      "newtab": "dashboard.html"
+   },
+   "description": "Bing Wallpaper as new tab background",
+   "manifest_version": 2,
+   "name": "Bingwall",
+   "offline_enabled": true,
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "permissions": [ "bookmarks", "unlimitedStorage", "*://*.bing.com/*", "chrome://favicon/" ],
+   "version": "0.1"
+}

@@ -1,0 +1,14 @@
+{
+    "env": {
+        "browser": true
+    },
+    "globals": {
+        "chrome": false,
+        "Promise": false,
+        "Handlebars": false
+    },
+    "rules": {
+      "no-global-strict": 0,
+      "no-use-before-define": [2, "nofunc"]
+    }
+}
