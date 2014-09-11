@@ -11,8 +11,8 @@
   function init(){
     setImageFromCache();
     get(bingServiceUrl)
-    .then(checkIfImageIsAlreadyInCache)
     .then(parseToJson)
+    .then(checkIfImageIsAlreadyInCache)
     .then(getBackground)
     .then(cacheImage)
     .then(setImage);
