@@ -7,6 +7,7 @@ Bingwall
 * Bookmark bar similar to the existing bookmark bar
 
 ## Getting Started
+* Install dependencies with `bower install`
 * Open chrome://extensions/
 * Enable developer-mode
 * Drag&drop bingwall folder into extension tab
