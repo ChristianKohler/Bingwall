@@ -13,6 +13,7 @@
     get(bingServiceUrl)
     .then(parseToJson)
     .then(checkIfImageIsAlreadyInCache)
+    .then(getCopyright)
     .then(getBackground)
     .then(cacheImage)
     .then(setImage);
@@ -33,6 +34,21 @@
     return new Promise(function(resolve) {
       resolve(JSON.parse(result.responseText));
     });
+  }
+
+  function getCopyright(data) {
+    return new Promise(function(resolve) {
+      setCopyright(data.images[0].copyright);
+      localStorage.setItem("wallpaper_caption", data.images[0].copyright);
+      resolve(data);
+    });
+  }
+
+  function setCopyright(captionText) {
+    var caption = document.querySelector("div.caption") || document.createElement("div");
+    caption.className = "caption";
+    caption.appendChild(document.createTextNode(captionText));
+    document.getElementsByTagName("body")[0].appendChild(caption);
   }
 
   function getBackground(data) {
@@ -91,9 +107,14 @@
 
   function setImageFromCache(result) {
     var cachedImage = localStorage.getItem("wallpaper");
+    var cachedCaption = localStorage.getItem("wallpaper_caption");
 
     if (cachedImage) {
       setImage(cachedImage);
+    }
+
+    if (cachedCaption) {
+      setCopyright(cachedCaption);
     }
   }
 

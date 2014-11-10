@@ -13,6 +13,13 @@ body {
   margin: 0;
 }
 
+div.caption {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  color: #FFF;
+}
+
 div#bookmarkbar ul{
   background-color: #F1F1F1;
   border-bottom: 1px solid #CDCDCD;
